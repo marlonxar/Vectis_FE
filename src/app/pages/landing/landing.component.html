@@ -1,793 +1,746 @@
-<!-- landing.component.html -->
-<a href="#main-content" class="skip-link">Skip to main content</a>
-
-<!-- ═══════════════════════════════════════════════════ NAV -->
-<nav aria-label="Primary navigation">
-  <a href="/" class="nav-logo" aria-label="Vectis Automation Group home">
-    <svg class="nav-logomark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-      <circle cx="20" cy="20" r="19" stroke="#E8C547" stroke-width="1.5"/>
-      <path d="M10 12L20 28L30 12" stroke="#E8C547" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-      <rect x="18" y="25" width="4" height="4" fill="#E8C547" transform="rotate(45 20 27)"/>
-    </svg>
-    <span class="nav-wordmark">VECTIS <span class="nav-dot">·</span> AUTOMATION GROUP</span>
+<a href="#main-content" class="skip-link">
+    Skip to content
   </a>
-
-  <ul class="nav-links" role="list">
-    <li><a href="#offer">What We Do</a></li>
-    <li><a href="#modules">Modules</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#contact" class="nav-cta-link">Get Started</a></li>
-  </ul>
-
-  <button class="nav-hamburger" id="navHamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
-
-<!-- Mobile menu -->
-<div class="mobile-menu" id="mobileMenu" role="dialog" aria-label="Navigation" aria-modal="true" hidden>
-  <button class="mobile-menu-close" id="mobileMenuClose" aria-label="Close menu">✕</button>
-  <ul role="list">
-    <li><a href="#offer">What We Do</a></li>
-    <li><a href="#modules">Modules</a></li>
-    <li><a href="#process">Process</a></li>
-    <li><a href="#pricing">Pricing</a></li>
-    <li><a href="#contact">Get Started</a></li>
-  </ul>
-</div>
-
-<!-- ═══════════════════════════════════════════════════ MAIN -->
-<main id="main-content">
-
-  <!-- ─── HERO ─── -->
-  <section id="hero" aria-labelledby="hero-heading">
-
-    <!-- Animated grid background -->
-    <div class="hero-grid" aria-hidden="true">
-      <div class="grid-lines"></div>
-      <div class="hero-glow glow-1"></div>
-      <div class="hero-glow glow-2"></div>
-      <div class="floating-node fn-1"></div>
-      <div class="floating-node fn-2"></div>
-      <div class="floating-node fn-3"></div>
-      <div class="connecting-line cl-1"></div>
-      <div class="connecting-line cl-2"></div>
-    </div>
-
-    <div class="hero-inner">
-
-      <div class="hero-badge animate-fade-up" style="animation-delay: 0.1s">
-        <span class="badge-dot"></span>
-        Custom Automation · US Property Management
+  
+  <nav aria-label="Primary navigation">
+  
+    <a href="/" class="nav-logo">
+  
+      <!-- Replace with your logo -->
+      <!-- <img src="assets/logo.svg" alt="Vectis Automation Group logo" class="logo-image"> -->
+  
+      <div class="logo-icon">
+        V
       </div>
-
-      <h1 class="hero-h1 animate-fade-up" id="hero-heading" style="animation-delay: 0.25s">
-        <span class="h1-line-1">Stop Doing Admin.</span>
-        <span class="h1-line-2">
-          <span class="h1-strike">20–30 hrs/week</span>
+  
+      <div class="logo-copy">
+        <span class="logo-title">
+          VECTIS
         </span>
-        <span class="h1-line-3">Automated<span class="h1-dot">.</span></span>
-      </h1>
-
-      <p class="hero-sub animate-fade-up" style="animation-delay: 0.45s">
-        Vectis Automation Group builds fully custom automation systems for US property management companies.
-        We eliminate your most painful admin workflows — in exactly <strong>14 days</strong>. Guaranteed.
-      </p>
-
-      <div class="hero-actions animate-fade-up" style="animation-delay: 0.6s">
-        <a href="#contact" class="btn-primary">
-          Book a Free Audit
-          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
-            <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+  
+        <span class="logo-subtitle">
+          Automation Group
+        </span>
+      </div>
+  
+    </a>
+  
+    <ul class="nav-links">
+  
+      <li>
+        <a href="#services">
+          Services
         </a>
-        <a href="#modules" class="btn-ghost">See What We Build</a>
-      </div>
-
-      <!-- Proof bar -->
-      <div class="hero-proof animate-fade-up" style="animation-delay: 0.75s" role="list" aria-label="Key metrics">
-        <div class="proof-item" role="listitem">
-          <span class="proof-number">20–30</span>
-          <span class="proof-label">Hours saved / week</span>
-        </div>
-        <div class="proof-divider" aria-hidden="true"></div>
-        <div class="proof-item" role="listitem">
-          <span class="proof-number">14</span>
-          <span class="proof-label">Days to go-live</span>
-        </div>
-        <div class="proof-divider" aria-hidden="true"></div>
-        <div class="proof-item" role="listitem">
-          <span class="proof-number">100%</span>
-          <span class="proof-label">Money-back guarantee</span>
-        </div>
-        <div class="proof-divider" aria-hidden="true"></div>
-        <div class="proof-item" role="listitem">
-          <span class="proof-number">5</span>
-          <span class="proof-label">Core modules</span>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Scroll indicator -->
-    <div class="scroll-indicator" aria-hidden="true">
-      <div class="scroll-line"></div>
-      <span>scroll</span>
-    </div>
-
-  </section>
-
-  <!-- ─── MARQUEE STRIP ─── -->
-  <div class="marquee-strip" aria-hidden="true">
-    <div class="marquee-inner">
-      <span>AppFolio</span>
-      <span class="marquee-sep">◆</span>
-      <span>Buildium</span>
-      <span class="marquee-sep">◆</span>
-      <span>Rent Manager</span>
-      <span class="marquee-sep">◆</span>
-      <span>Maintenance Dispatch</span>
-      <span class="marquee-sep">◆</span>
-      <span>Lease Renewals</span>
-      <span class="marquee-sep">◆</span>
-      <span>Rent Collection</span>
-      <span class="marquee-sep">◆</span>
-      <span>Owner Reporting</span>
-      <span class="marquee-sep">◆</span>
-      <span>Tenant Onboarding</span>
-      <span class="marquee-sep">◆</span>
-      <span>AppFolio</span>
-      <span class="marquee-sep">◆</span>
-      <span>Buildium</span>
-      <span class="marquee-sep">◆</span>
-      <span>Rent Manager</span>
-      <span class="marquee-sep">◆</span>
-      <span>Maintenance Dispatch</span>
-      <span class="marquee-sep">◆</span>
-      <span>Lease Renewals</span>
-      <span class="marquee-sep">◆</span>
-      <span>Rent Collection</span>
-      <span class="marquee-sep">◆</span>
-      <span>Owner Reporting</span>
-      <span class="marquee-sep">◆</span>
-      <span>Tenant Onboarding</span>
-      <span class="marquee-sep">◆</span>
-    </div>
+      </li>
+  
+      <li>
+        <a href="#solutions">
+          Solutions
+        </a>
+      </li>
+  
+      <li>
+        <a href="#process">
+          Process
+        </a>
+      </li>
+  
+      <li>
+        <a href="#pricing">
+          Pricing
+        </a>
+      </li>
+  
+      <li>
+        <a href="#contact">
+          Contact
+        </a>
+      </li>
+  
+    </ul>
+  
+    <a href="#contact" class="nav-cta desktop-only">
+      Book Free Audit
+    </a>
+  
+    <button
+      class="mobile-toggle"
+      aria-label="Toggle mobile menu"
+      (click)="toggleMobileMenu()"
+    >
+      ☰
+    </button>
+  
+  </nav>
+  
+  <div
+    class="mobile-menu"
+    [class.open]="mobileMenuOpen"
+  >
+  
+    <button
+      class="mobile-close"
+      aria-label="Close menu"
+      (click)="closeMobileMenu()"
+    >
+      ✕
+    </button>
+  
+    <a href="#services" (click)="closeMobileMenu()">
+      Services
+    </a>
+  
+    <a href="#solutions" (click)="closeMobileMenu()">
+      Solutions
+    </a>
+  
+    <a href="#process" (click)="closeMobileMenu()">
+      Process
+    </a>
+  
+    <a href="#pricing" (click)="closeMobileMenu()">
+      Pricing
+    </a>
+  
+    <a href="#contact" (click)="closeMobileMenu()">
+      Contact
+    </a>
+  
   </div>
-
-  <!-- ─── PROBLEM STATEMENT ─── -->
-  <section id="offer" aria-labelledby="offer-heading">
-    <div class="container">
-
-      <div class="section-label reveal">The Problem</div>
-
-      <div class="problem-layout">
-        <div class="problem-left reveal">
-          <h2 class="section-h2" id="offer-heading">
-            Property managers are drowning in admin work that should never require a human.
+  
+  <main id="main-content">
+  
+    <!-- HERO -->
+  
+    <section id="hero">
+  
+      <div class="hero-grid-pattern"></div>
+  
+      <div class="hero-glow hero-glow-1"></div>
+      <div class="hero-glow hero-glow-2"></div>
+  
+      <div class="container hero-grid">
+  
+        <div class="hero-copy reveal">
+  
+          <div class="hero-badge">
+            Property Management Automation
+          </div>
+  
+          <h1 class="hero-title">
+            Eliminate repetitive admin work and scale operations with automation.
+          </h1>
+  
+          <p class="hero-description">
+            Vectis builds custom workflow automation systems for US property management companies.
+            Save operational hours, improve response times, and centralize repetitive processes
+            into scalable automated systems.
+          </p>
+  
+          <div class="hero-actions">
+  
+            <a href="#contact" class="btn-primary">
+              Book Free Audit
+            </a>
+  
+            <a href="#solutions" class="btn-secondary">
+              Explore Solutions
+            </a>
+  
+          </div>
+  
+          <div class="hero-stats">
+  
+            <div class="stat-card">
+              <strong>20-30 hrs</strong>
+              <span>saved weekly</span>
+            </div>
+  
+            <div class="stat-card">
+              <strong>14 days</strong>
+              <span>average deployment</span>
+            </div>
+  
+            <div class="stat-card">
+              <strong>100%</strong>
+              <span>custom workflows</span>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+        <div class="hero-visual reveal">
+  
+          <div class="dashboard-window">
+  
+            <div class="dashboard-topbar">
+  
+              <span></span>
+              <span></span>
+              <span></span>
+  
+            </div>
+  
+            <div class="dashboard-content">
+  
+              <div class="dashboard-metric">
+  
+                <small>
+                  Monthly Tasks Automated
+                </small>
+  
+                <strong>
+                  18,420
+                </strong>
+  
+              </div>
+  
+              <div class="dashboard-chart">
+  
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar"></div>
+                <div class="chart-bar active"></div>
+                <div class="chart-bar"></div>
+  
+              </div>
+  
+              <div class="workflow-list">
+  
+                <div class="workflow-item">
+                  Tenant request processed
+                </div>
+  
+                <div class="workflow-item">
+                  Vendor assigned automatically
+                </div>
+  
+                <div class="workflow-item active">
+                  Payment reminder sent
+                </div>
+  
+                <div class="workflow-item">
+                  CRM updated
+                </div>
+  
+              </div>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </section>
+  
+    <!-- TRUST -->
+  
+    <section class="trust-section">
+  
+      <div class="container">
+  
+        <div class="trust-grid reveal">
+  
+          <div class="trust-item">
+            Workflow Automation
+          </div>
+  
+          <div class="trust-item">
+            CRM Integrations
+          </div>
+  
+          <div class="trust-item">
+            Property Management Systems
+          </div>
+  
+          <div class="trust-item">
+            AI Process Automation
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </section>
+  
+    <!-- SERVICES -->
+  
+    <section id="services" class="section">
+  
+      <div class="container">
+  
+        <div class="section-header reveal">
+  
+          <span class="section-tag">
+            SERVICES
+          </span>
+  
+          <h2>
+            Automation systems built around your operations
           </h2>
-        </div>
-        <div class="problem-right">
-          <p class="problem-body reveal">
-            Every day, your team manually coordinates maintenance vendors, chases rent payments,
-            sends lease renewal reminders, and compiles owner reports. Each of these tasks is
-            repetitive, rule-based, and completely automatable.
+  
+          <p>
+            Every company operates differently.
+            We build custom automation infrastructure adapted to your existing workflows.
           </p>
-          <p class="problem-body reveal" style="margin-top: 1.25rem;">
-            That's 20 to 30 hours per week — per person — vanishing into work that generates
-            zero new revenue and can be done entirely by machines.
-          </p>
-          <div class="problem-stat-row reveal">
-            <div class="pstat">
-              <span class="pstat-num">$42K</span>
-              <span class="pstat-lbl">Avg. annual cost of one admin hire</span>
-            </div>
-            <div class="pstat">
-              <span class="pstat-num">$4.5K</span>
-              <span class="pstat-lbl">Lost per missed lease renewal</span>
-            </div>
-            <div class="pstat">
-              <span class="pstat-num">200+</span>
-              <span class="pstat-lbl">Manual messages sent per month</span>
-            </div>
-          </div>
+  
         </div>
-      </div>
-
-      <!-- Offer cards -->
-      <div class="offer-grid" role="list">
-
-        <div class="offer-card reveal" role="listitem">
-          <div class="offer-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="#E8C547" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="offer-price">$2,500 – $4,500</div>
-          <div class="offer-title">One-Time Setup</div>
-          <p class="offer-desc">We audit your workflows, build 2–4 custom automation modules, and integrate directly with your PM software. No templates. No off-the-shelf tools.</p>
-          <ul class="offer-checklist" aria-label="Setup includes">
-            <li>Full workflow audit</li>
-            <li>2–4 modules built custom</li>
-            <li>Direct PM platform integration</li>
-            <li>Team training & go-live support</li>
-          </ul>
-        </div>
-
-        <div class="offer-card reveal" role="listitem" style="animation-delay: 0.15s">
-          <div class="offer-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none">
-              <circle cx="12" cy="12" r="10" stroke="#E8C547" stroke-width="1.5"/>
-              <path d="M12 6v6l4 2" stroke="#E8C547" stroke-width="1.5" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="offer-price">$500 – $1,500<span style="font-size:1rem; font-weight:400">/mo</span></div>
-          <div class="offer-title">Monthly Retainer</div>
-          <p class="offer-desc">Ongoing monitoring, maintenance, updates, and workflow expansions as your portfolio grows. First month is always included in your setup.</p>
-          <ul class="offer-checklist" aria-label="Retainer includes">
-            <li>System uptime monitoring</li>
-            <li>Workflow updates & tuning</li>
-            <li>Priority support channel</li>
-            <li>Monthly performance report</li>
-          </ul>
-        </div>
-
-        <div class="offer-card offer-card--highlight reveal" role="listitem" style="animation-delay: 0.3s">
-          <div class="offer-icon" aria-hidden="true">
-            <svg viewBox="0 0 24 24" fill="none">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="#1A1A2E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="offer-price" style="color: #1A1A2E">100%</div>
-          <div class="offer-title" style="color: #1A1A2E">Money-Back Guarantee</div>
-          <p class="offer-desc" style="color: rgba(26,26,46,0.75)">If we don't save you at least 15 hours per week within 30 days of go-live, you get a full refund. No questions asked. We build it, it works — or you pay nothing.</p>
-          <div class="guarantee-seal" aria-hidden="true">
-            <svg viewBox="0 0 60 60" fill="none">
-              <polygon points="30,4 36,22 55,22 40,34 46,52 30,40 14,52 20,34 5,22 24,22" stroke="#1A1A2E" stroke-width="1.5" fill="rgba(26,26,46,0.1)"/>
-              <text x="30" y="34" text-anchor="middle" fill="#1A1A2E" font-size="8" font-weight="700">GUARANTEED</text>
-            </svg>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── MODULES ─── -->
-  <section id="modules" aria-labelledby="modules-heading">
-    <div class="container">
-
-      <div class="section-label reveal">Automation Modules</div>
-
-      <div class="modules-header">
-        <h2 class="section-h2 reveal" id="modules-heading">
-          Five systems.<br>Every client gets 2–4.
-        </h2>
-        <p class="modules-sub reveal">
-          Each module is independent and purpose-built for residential property management.
-          Modular by design — start with your biggest pain point.
-        </p>
-      </div>
-
-      <!-- Module list -->
-      <div class="modules-list" role="list">
-
-        <!-- Module 01 -->
-        <article class="module-item reveal" role="listitem">
-          <div class="module-number" aria-label="Module 1">01</div>
-          <div class="module-body">
-            <div class="module-meta">
-              <div class="module-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" stroke="#E8C547" stroke-width="1.5"/>
-                  <path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" stroke="#E8C547" stroke-width="1.5"/>
-                </svg>
-              </div>
-              <h3 class="module-title">Maintenance Dispatch</h3>
+  
+        <div class="services-grid">
+  
+          <div class="service-card reveal">
+  
+            <div class="service-icon">
+              ⚡
             </div>
-            <p class="module-desc">
-              Tenant submits a request → system auto-categorizes the issue → dispatches to the correct vendor →
-              vendor confirms → tenant receives status update → PM software gets updated. Zero human touch required.
+  
+            <h3>
+              Maintenance Workflow Automation
+            </h3>
+  
+            <p>
+              Route maintenance requests automatically,
+              assign vendors instantly,
+              and notify tenants in real time.
             </p>
-            <div class="module-flow" aria-label="Workflow steps">
-              <span>Request</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Categorize</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Dispatch</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Update</span>
-            </div>
+  
           </div>
-          <div class="module-impact">
-            <div class="impact-label">Time Saved</div>
-            <div class="impact-value">3 hrs/day</div>
-          </div>
-        </article>
-
-        <!-- Module 02 -->
-        <article class="module-item reveal" role="listitem" style="animation-delay: 0.1s">
-          <div class="module-number" aria-label="Module 2">02</div>
-          <div class="module-body">
-            <div class="module-meta">
-              <div class="module-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" stroke="#E8C547" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <h3 class="module-title">Rent Collection Comms</h3>
+  
+          <div class="service-card reveal">
+  
+            <div class="service-icon">
+              💳
             </div>
-            <p class="module-desc">
-              Pre-due reminders, due-date notices, late payment escalations, and legal notice triggers — all fully automated per tenant, personalized with unit and amount data pulled live from your PM software.
+  
+            <h3>
+              Payment Reminder Systems
+            </h3>
+  
+            <p>
+              Reduce late payments with automated reminders,
+              escalation sequences,
+              and smart communication flows.
             </p>
-            <div class="module-flow" aria-label="Workflow steps">
-              <span>Pre-due Alert</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Due Notice</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Escalation</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Legal Trigger</span>
-            </div>
+  
           </div>
-          <div class="module-impact">
-            <div class="impact-label">Messages Eliminated</div>
-            <div class="impact-value">200+/mo</div>
-          </div>
-        </article>
-
-        <!-- Module 03 -->
-        <article class="module-item reveal" role="listitem" style="animation-delay: 0.2s">
-          <div class="module-number" aria-label="Module 3">03</div>
-          <div class="module-body">
-            <div class="module-meta">
-              <div class="module-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" stroke="#E8C547" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <h3 class="module-title">Lease Renewal Pipeline</h3>
+  
+          <div class="service-card reveal">
+  
+            <div class="service-icon">
+              📊
             </div>
-            <p class="module-desc">
-              Automated outreach at 90, 60, and 30 days before expiry. Alerts your PM when action is needed. Tracks renewal status in real time. Every expiring lease is caught — every single time.
+  
+            <h3>
+              Reporting & KPI Dashboards
+            </h3>
+  
+            <p>
+              Monitor team performance,
+              tenant response times,
+              operational metrics,
+              and workflow bottlenecks.
             </p>
-            <div class="module-flow" aria-label="Workflow steps">
-              <span>90 Days</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>60 Days</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>30 Days</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>PM Alert</span>
-            </div>
+  
           </div>
-          <div class="module-impact">
-            <div class="impact-label">Value per Renewal</div>
-            <div class="impact-value">$4,500</div>
-          </div>
-        </article>
-
-        <!-- Module 04 -->
-        <article class="module-item reveal" role="listitem" style="animation-delay: 0.3s">
-          <div class="module-number" aria-label="Module 4">04</div>
-          <div class="module-body">
-            <div class="module-meta">
-              <div class="module-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" stroke="#E8C547" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <h3 class="module-title">Tenant Onboarding</h3>
-            </div>
-            <p class="module-desc">
-              Move-in checklist automation: welcome packet, utility setup reminders, portal access, key handoff coordination, and inspection scheduling. The same perfect sequence for every new tenant.
+  
+        </div>
+  
+      </div>
+  
+    </section>
+  
+    <!-- ROI SECTION -->
+  
+    <section class="section alt-section">
+  
+      <div class="container">
+  
+        <div class="roi-grid">
+  
+          <div class="roi-copy reveal">
+  
+            <span class="section-tag">
+              ROI
+            </span>
+  
+            <h2>
+              Most property management teams waste hundreds of hours manually.
+            </h2>
+  
+            <p>
+              Repetitive admin work slows growth,
+              increases operational overhead,
+              and creates unnecessary bottlenecks.
             </p>
-            <div class="module-flow" aria-label="Workflow steps">
-              <span>Welcome</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Utilities</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Portal Access</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Inspection</span>
-            </div>
+  
+            <ul class="roi-list">
+  
+              <li>
+                Automated reminders and notifications
+              </li>
+  
+              <li>
+                Vendor assignment workflows
+              </li>
+  
+              <li>
+                CRM synchronization
+              </li>
+  
+              <li>
+                Internal task automation
+              </li>
+  
+              <li>
+                Escalation systems
+              </li>
+  
+            </ul>
+  
           </div>
-          <div class="module-impact">
-            <div class="impact-label">Per Move-In</div>
-            <div class="impact-value">3 hrs → 15 min</div>
-          </div>
-        </article>
-
-        <!-- Module 05 -->
-        <article class="module-item reveal" role="listitem" style="animation-delay: 0.4s">
-          <div class="module-number" aria-label="Module 5">05</div>
-          <div class="module-body">
-            <div class="module-meta">
-              <div class="module-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" stroke="#E8C547" stroke-width="1.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <h3 class="module-title">Owner Reporting</h3>
+  
+          <div class="roi-card reveal">
+  
+            <div class="roi-value">
+              +240 hrs
             </div>
-            <p class="module-desc">
-              Auto-generate monthly reports pulling income, expenses, maintenance logs, and occupancy data from your PM software. Auto-format and auto-send to every property owner on schedule — without a human ever touching it.
+  
+            <span>
+              Average monthly operational time saved
+            </span>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </section>
+  
+    <!-- SOLUTIONS -->
+  
+    <section id="solutions" class="section">
+  
+      <div class="container">
+  
+        <div class="section-header reveal">
+  
+          <span class="section-tag">
+            SOLUTIONS
+          </span>
+  
+          <h2>
+            Built for scalable operations
+          </h2>
+  
+        </div>
+  
+        <div class="solutions-grid">
+  
+          <div class="solution-card reveal">
+  
+            <h3>
+              Tenant Communication
+            </h3>
+  
+            <p>
+              SMS, email, reminders,
+              escalation flows,
+              and status updates.
             </p>
-            <div class="module-flow" aria-label="Workflow steps">
-              <span>Pull Data</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Generate Report</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Format</span>
-              <span class="flow-arrow" aria-hidden="true">→</span>
-              <span>Auto-Send</span>
-            </div>
+  
           </div>
-          <div class="module-impact">
-            <div class="impact-label">Monthly Time Saved</div>
-            <div class="impact-value">8+ hrs</div>
+  
+          <div class="solution-card reveal">
+  
+            <h3>
+              Smart Task Routing
+            </h3>
+  
+            <p>
+              Assign tasks automatically to departments,
+              vendors,
+              or maintenance teams.
+            </p>
+  
           </div>
-        </article>
-
+  
+          <div class="solution-card reveal">
+  
+            <h3>
+              CRM Integrations
+            </h3>
+  
+            <p>
+              Connect internal systems,
+              CRMs,
+              spreadsheets,
+              and external platforms.
+            </p>
+  
+          </div>
+  
+          <div class="solution-card reveal">
+  
+            <h3>
+              AI Assisted Processes
+            </h3>
+  
+            <p>
+              Use AI to classify requests,
+              prioritize tickets,
+              and automate responses.
+            </p>
+  
+          </div>
+  
+        </div>
+  
       </div>
-
-      <!-- Build ratio -->
-      <div class="build-ratio reveal" aria-labelledby="build-ratio-heading">
-        <h3 class="build-ratio-title" id="build-ratio-heading">How We Build</h3>
-        <p class="build-ratio-sub">Not Zapier. Not templates. Real engineering.</p>
-        <div class="ratio-bars" role="list" aria-label="Build composition">
-          <div class="ratio-bar-item" role="listitem">
-            <div class="ratio-label">Traditional Automation</div>
-            <div class="ratio-track" aria-label="60 percent">
-              <div class="ratio-fill" style="width: 60%" data-pct="60%"></div>
-            </div>
-            <div class="ratio-pct">60%</div>
-            <div class="ratio-note">Rule-based triggers, scheduled tasks, API integrations</div>
-          </div>
-          <div class="ratio-bar-item" role="listitem">
-            <div class="ratio-label">AI-Assisted</div>
-            <div class="ratio-track" aria-label="30 percent">
-              <div class="ratio-fill ratio-fill--ai" style="width: 30%" data-pct="30%"></div>
-            </div>
-            <div class="ratio-pct">30%</div>
-            <div class="ratio-note">NLP categorization, smart routing, predictive alerts</div>
-          </div>
-          <div class="ratio-bar-item" role="listitem">
-            <div class="ratio-label">Human Approval</div>
-            <div class="ratio-track" aria-label="10 percent">
-              <div class="ratio-fill ratio-fill--human" style="width: 10%" data-pct="10%"></div>
-            </div>
-            <div class="ratio-pct">10%</div>
-            <div class="ratio-note">Escalation checkpoints, edge cases, override controls</div>
-          </div>
+  
+    </section>
+  
+    <!-- PROCESS -->
+  
+    <section id="process" class="section alt-section">
+  
+      <div class="container narrow">
+  
+        <div class="section-header reveal">
+  
+          <span class="section-tag">
+            PROCESS
+          </span>
+  
+          <h2>
+            From workflow audit to deployment
+          </h2>
+  
         </div>
+  
+        <div class="timeline">
+  
+          <div class="timeline-item reveal">
+  
+            <strong>
+              01
+            </strong>
+  
+            <div>
+  
+              <h3>
+                Workflow Audit
+              </h3>
+  
+              <p>
+                We analyze repetitive tasks,
+                bottlenecks,
+                and operational inefficiencies.
+              </p>
+  
+            </div>
+  
+          </div>
+  
+          <div class="timeline-item reveal">
+  
+            <strong>
+              02
+            </strong>
+  
+            <div>
+  
+              <h3>
+                Automation Architecture
+              </h3>
+  
+              <p>
+                We design automation systems tailored to your team structure.
+              </p>
+  
+            </div>
+  
+          </div>
+  
+          <div class="timeline-item reveal">
+  
+            <strong>
+              03
+            </strong>
+  
+            <div>
+  
+              <h3>
+                Deployment & Optimization
+              </h3>
+  
+              <p>
+                Your workflows go live with testing,
+                optimization,
+                and continuous support.
+              </p>
+  
+            </div>
+  
+          </div>
+  
+        </div>
+  
       </div>
-
-    </div>
-  </section>
-
-  <!-- ─── PROCESS ─── -->
-  <section id="process" aria-labelledby="process-heading">
-    <div class="container">
-
-      <div class="section-label reveal">The Process</div>
-      <h2 class="section-h2 reveal" id="process-heading">
-        Audit. Build. Go-live.<br>14 days, flat.
-      </h2>
-
-      <div class="process-grid">
-
-        <div class="process-step reveal" style="animation-delay: 0s">
-          <div class="process-step-num" aria-label="Step 1">01</div>
-          <div class="process-step-days">Days 1–3</div>
-          <h3 class="process-step-title">Operational Audit</h3>
-          <p class="process-step-desc">
-            We map every admin workflow in your operation. You share screen-recordings, Loom walkthroughs,
-            or a call. We identify the 2–4 highest-impact automation opportunities and scope the build.
-          </p>
-          <div class="process-step-deliverable">
-            <span class="deliverable-label">Deliverable:</span> Workflow map + integration plan
-          </div>
-        </div>
-
-        <div class="process-connector" aria-hidden="true"></div>
-
-        <div class="process-step reveal" style="animation-delay: 0.15s">
-          <div class="process-step-num" aria-label="Step 2">02</div>
-          <div class="process-step-days">Days 4–10</div>
-          <h3 class="process-step-title">Build & Integrate</h3>
-          <p class="process-step-desc">
-            Our engineering team builds your modules and connects them to your AppFolio, Buildium, or
-            Rent Manager instance. We handle all the API auth, data mapping, and workflow logic. You do nothing.
-          </p>
-          <div class="process-step-deliverable">
-            <span class="deliverable-label">Deliverable:</span> Working system in staging
-          </div>
-        </div>
-
-        <div class="process-connector" aria-hidden="true"></div>
-
-        <div class="process-step reveal" style="animation-delay: 0.3s">
-          <div class="process-step-num" aria-label="Step 3">03</div>
-          <div class="process-step-days">Days 11–14</div>
-          <h3 class="process-step-title">Test & Go-Live</h3>
-          <p class="process-step-desc">
-            Live testing with your real data. We walk your team through the system, run edge cases, and
-            confirm every trigger fires correctly. On day 14, we flip the switch. You're live.
-          </p>
-          <div class="process-step-deliverable">
-            <span class="deliverable-label">Deliverable:</span> Live system + team training
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── WHO WE SERVE ─── -->
-  <section id="who" aria-labelledby="who-heading">
-    <div class="container">
-
-      <div class="section-label reveal">Who This Is For</div>
-
-      <div class="who-layout">
-
-        <div class="who-left reveal">
-          <h2 class="section-h2" id="who-heading">Built for growing PM companies in the US Sunbelt.</h2>
-        </div>
-
-        <div class="who-right">
-
-          <div class="who-specs reveal">
-            <div class="spec-row">
-              <div class="spec-label">Portfolio size</div>
-              <div class="spec-value">50 – 500 units under management</div>
-            </div>
-            <div class="spec-row">
-              <div class="spec-label">Decision maker</div>
-              <div class="spec-value">Owner / Principal / Director of Operations</div>
-            </div>
-            <div class="spec-row">
-              <div class="spec-label">PM software</div>
-              <div class="spec-value">AppFolio, Buildium, or Rent Manager</div>
-            </div>
-            <div class="spec-row">
-              <div class="spec-label">Key signal</div>
-              <div class="spec-value">Hiring admin staff or growing portfolio rapidly</div>
-            </div>
-            <div class="spec-row">
-              <div class="spec-label">Property type</div>
-              <div class="spec-value">Residential multifamily</div>
-            </div>
-          </div>
-
-          <div class="cities-block reveal">
-            <div class="cities-label">Tier 1 Markets</div>
-            <div class="cities-list">
-              <span>Dallas-Fort Worth, TX</span>
-              <span>Charlotte, NC</span>
-              <span>Phoenix, AZ</span>
-              <span>Austin, TX</span>
-              <span>San Antonio, TX</span>
-              <span>Raleigh-Durham, NC</span>
-            </div>
-            <div class="cities-label" style="margin-top: 1.25rem;">Tier 2 — Expanding</div>
-            <div class="cities-list">
-              <span>Columbus, OH</span>
-              <span>Nashville, TN</span>
-              <span>Jacksonville, FL</span>
-              <span>Tampa, FL</span>
-              <span>Huntsville, AL</span>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ─── PRICING ─── -->
-  <section id="pricing" aria-labelledby="pricing-heading">
-    <div class="container">
-
-      <div class="section-label reveal">Pricing</div>
-      <h2 class="section-h2 reveal" id="pricing-heading">
-        Simple, transparent pricing.<br>No surprises.
-      </h2>
-
-      <div class="pricing-grid">
-
+  
+    </section>
+  
+    <!-- PRICING -->
+  
+    <section id="pricing" class="section">
+  
+      <div class="container narrow">
+  
         <div class="pricing-card reveal">
-          <div class="pricing-card-label">Setup</div>
-          <div class="pricing-price">$2,500</div>
-          <div class="pricing-price-note">starting at · one-time</div>
-          <ul class="pricing-list" aria-label="Setup includes">
-            <li>Full operational workflow audit</li>
-            <li>2 automation modules built custom</li>
-            <li>Direct PM software API integration</li>
-            <li>14-day implementation timeline</li>
-            <li>Team training & documentation</li>
-            <li>1 month retainer included</li>
-          </ul>
-          <a href="#contact" class="btn-ghost btn-full">Book a Call</a>
-        </div>
-
-        <div class="pricing-card pricing-card--featured reveal" style="animation-delay: 0.15s">
-          <div class="pricing-badge">Most Popular</div>
-          <div class="pricing-card-label">Setup + Scale</div>
-          <div class="pricing-price">$4,500</div>
-          <div class="pricing-price-note">one-time · 4 modules</div>
-          <ul class="pricing-list" aria-label="Scale includes">
-            <li>Full operational workflow audit</li>
-            <li><strong>4 automation modules built custom</strong></li>
-            <li>Direct PM software API integration</li>
-            <li>14-day implementation timeline</li>
-            <li>Team training & documentation</li>
-            <li><strong>1 month retainer included</strong></li>
-            <li>Priority engineering support</li>
-          </ul>
-          <a href="#contact" class="btn-primary btn-full">Book a Call</a>
-        </div>
-
-        <div class="pricing-card reveal" style="animation-delay: 0.3s">
-          <div class="pricing-card-label">Monthly Retainer</div>
-          <div class="pricing-price">$500</div>
-          <div class="pricing-price-note">starting at · per month</div>
-          <ul class="pricing-list" aria-label="Retainer includes">
-            <li>System uptime monitoring</li>
-            <li>Workflow updates & tuning</li>
-            <li>Priority support channel</li>
-            <li>Monthly performance report</li>
-            <li>Expansion of existing modules</li>
-            <li>Scales with your portfolio</li>
-          </ul>
-          <a href="#contact" class="btn-ghost btn-full">Book a Call</a>
-        </div>
-
-      </div>
-
-      <div class="guarantee-banner reveal" role="note" aria-label="Money-back guarantee">
-        <div class="guarantee-icon" aria-hidden="true">✦</div>
-        <div>
-          <strong>100% Money-Back Guarantee.</strong> If you don't save at least 15 hours per week within 30 days of go-live, we refund everything. No contracts, no lock-in.
-        </div>
-      </div>
-
-    </div>
-  </section>
-
-  <!-- ─── ROI SECTION ─── -->
-  <section id="roi" aria-labelledby="roi-heading">
-    <div class="container">
-
-      <div class="roi-layout">
-        <div class="roi-left reveal">
-          <div class="section-label">The Math</div>
-          <h2 class="section-h2" id="roi-heading">Your ROI on day one.</h2>
-          <p class="roi-body">
-            For a 200-unit portfolio, the numbers are immediate. Your biggest admin pain costs more than you think — and our system pays for itself in weeks, not years.
-          </p>
-        </div>
-        <div class="roi-right reveal">
-          <div class="roi-table" role="table" aria-label="ROI comparison">
-            <div class="roi-table-header" role="row">
-              <div role="columnheader">Without Vectis</div>
-              <div role="columnheader">With Vectis</div>
-              <div role="columnheader">Savings</div>
-            </div>
-            <div class="roi-row" role="row">
-              <div role="cell">Admin hire: <strong>$42K/yr</strong></div>
-              <div role="cell">Setup + retainer: <strong>~$10K/yr</strong></div>
-              <div class="roi-savings" role="cell">$30–38K saved</div>
-            </div>
-            <div class="roi-row" role="row">
-              <div role="cell">Missed renewals: <strong>$4.5K each</strong></div>
-              <div role="cell">System catches: <strong>100%</strong></div>
-              <div class="roi-savings" role="cell">$36–45K prevented</div>
-            </div>
-            <div class="roi-row" role="row">
-              <div role="cell">Admin hours: <strong>20–30/wk</strong></div>
-              <div role="cell">Admin hours: <strong>0</strong></div>
-              <div class="roi-savings" role="cell">Full team reclaimed</div>
-            </div>
+  
+          <span class="section-tag">
+            PRICING
+          </span>
+  
+          <h2>
+            Custom automation packages
+          </h2>
+  
+          <div class="price">
+            Starting at $1,500
           </div>
+  
+          <p>
+            Pricing depends on workflow complexity,
+            integrations,
+            deployment scope,
+            and automation requirements.
+          </p>
+  
+          <div class="pricing-actions">
+  
+            <a href="#contact" class="btn-primary">
+              Request Proposal
+            </a>
+  
+          </div>
+  
         </div>
+  
       </div>
-
-    </div>
-  </section>
-
-  <!-- ─── CTA / CONTACT ─── -->
-  <section id="contact" aria-labelledby="contact-heading">
-    <div class="contact-wrap">
-
-      <div class="contact-glow" aria-hidden="true"></div>
-
-      <div class="contact-inner">
-
-        <div class="section-label" style="justify-content: center;">Get Started</div>
-
-        <h2 class="contact-h2" id="contact-heading">
-          Book your free workflow audit.
-        </h2>
-
-        <p class="contact-sub">
-          We'll map your workflows, identify the highest-impact automation opportunities,
-          and give you a clear scope before you spend a dollar.
+  
+    </section>
+  
+    <!-- CONTACT -->
+  
+    <section id="contact" class="section alt-section">
+  
+      <div class="container narrow">
+  
+        <div class="contact-card reveal">
+  
+          <!-- Replace with logo -->
+          <!-- <img src="assets/logo.svg" alt="Vectis Automation Group logo" class="footer-logo"> -->
+  
+          <div class="footer-logo-placeholder">
+            V
+          </div>
+  
+          <span class="section-tag">
+            CONTACT
+          </span>
+  
+          <h2>
+            Let’s automate your operations
+          </h2>
+  
+          <p>
+            Schedule a free workflow audit and discover
+            how much operational time your company can save.
+          </p>
+  
+          <div class="contact-actions">
+  
+            <a href="mailto:hello@vectisautomation.com" class="btn-primary">
+              hello@vectisautomation.com
+            </a>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+  
+    </section>
+  
+  </main>
+  
+  <footer class="footer">
+  
+    <div class="container footer-grid">
+  
+      <div class="footer-brand">
+  
+        <!-- Replace with logo -->
+        <!-- <img src="assets/logo.svg" alt="Vectis Automation Group logo" class="footer-logo"> -->
+  
+        <div class="footer-logo-placeholder">
+          V
+        </div>
+  
+        <p>
+          Workflow automation systems for modern property management companies.
         </p>
-
-        <div class="contact-actions">
-          <a
-            href="mailto:hello@vectisauto.com"
-            class="btn-primary btn-large"
-            aria-label="Email us to book an audit"
-          >
-            Email Us to Book
-            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
-              <path d="M3 9h12M11 5l4 4-4 4" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </a>
-          <a
-            href="https://www.instagram.com/wearevectis"
-            class="btn-ghost btn-large"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Follow us on Instagram (opens in a new tab)"
-          >
-            Follow on Instagram
-          </a>
-        </div>
-
-        <div class="contact-email-display">
-          hello@vectisauto.com
-        </div>
-
-        <div class="contact-trust">
-          <span>✦ No commitment required</span>
-          <span>✦ 60-minute call</span>
-          <span>✦ Actionable takeaways</span>
-        </div>
-
+  
       </div>
+  
+      <div class="footer-links">
+  
+        <h4>
+          Navigation
+        </h4>
+  
+        <a href="#services">
+          Services
+        </a>
+  
+        <a href="#solutions">
+          Solutions
+        </a>
+  
+        <a href="#pricing">
+          Pricing
+        </a>
+  
+        <a href="#contact">
+          Contact
+        </a>
+  
+      </div>
+  
+      <div class="footer-links">
+  
+        <h4>
+          Contact
+        </h4>
+  
+        <a href="mailto:hello@vectisautomation.com">
+          hello@vectisautomation.com
+        </a>
+  
+        <span>
+          United States
+        </span>
+  
+      </div>
+  
     </div>
-  </section>
-
-</main>
-
-<!-- ═══════════════════════════════════════════════════ FOOTER -->
-<footer>
-  <div class="footer-inner">
-
-    <div class="footer-brand-block">
-      <a href="/" class="footer-logo" aria-label="Vectis Automation Group home">
-        <svg class="footer-logomark" viewBox="0 0 40 40" fill="none" aria-hidden="true">
-          <circle cx="20" cy="20" r="19" stroke="#E8C547" stroke-width="1.5"/>
-          <path d="M10 12L20 28L30 12" stroke="#E8C547" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-          <rect x="18" y="25" width="4" height="4" fill="#E8C547" transform="rotate(45 20 27)"/>
-        </svg>
-        <span class="footer-wordmark">VECTIS <span>·</span> AUTOMATION GROUP</span>
-      </a>
-      <p class="footer-tagline">Custom automation for property management companies.</p>
+  
+    <div class="footer-bottom">
+      © 2026 Vectis Automation Group. All rights reserved.
     </div>
-
-    <div class="footer-contact-block">
-      <a href="mailto:hello@vectisauto.com" class="footer-email">hello@vectisauto.com</a>
-      <a href="https://www.instagram.com/wearevectis" target="_blank" rel="noopener noreferrer" class="footer-instagram">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <rect x="2" y="2" width="20" height="20" rx="5" ry="5" stroke="#E8C547" stroke-width="1.5"/>
-          <path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z" stroke="#E8C547" stroke-width="1.5"/>
-          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="#E8C547" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-        &#64;wearevectis
-      </a>
-      <div class="footer-cities">Dallas · Charlotte · Phoenix · Austin</div>
-    </div>
-
-  </div>
-
-  <div class="footer-bottom">
-    <span>© 2026 Vectis Automation Group. All rights reserved.</span>
-    <span class="footer-hashtag">#WeAreVectis</span>
-  </div>
-</footer>
+  
+  </footer>

@@ -1,9 +1,8 @@
-// landing.component.ts
 import {
   AfterViewInit,
   Component,
-  ViewEncapsulation,
-  OnDestroy
+  OnDestroy,
+  ViewEncapsulation
 } from '@angular/core';
 
 @Component({
@@ -14,15 +13,14 @@ import {
 })
 export class LandingComponent implements AfterViewInit, OnDestroy {
 
+  mobileMenuOpen = false;
+
   private scrollListener!: () => void;
-  private mobileMenuOpen = false;
 
   ngAfterViewInit(): void {
-    this.initScrollReveal();
-    this.initNavScroll();
-    this.initMobileMenu();
-    this.initRatioBars();
-    this.initSmoothClose();
+    this.initRevealAnimations();
+    this.initNavbarScroll();
+    this.initActiveLinks();
   }
 
   ngOnDestroy(): void {
@@ -31,139 +29,81 @@ export class LandingComponent implements AfterViewInit, OnDestroy {
     }
   }
 
-  // ─── Scroll reveal ───────────────────────────────────────────────────────────
-  private initScrollReveal(): void {
+  toggleMobileMenu(): void {
+    this.mobileMenuOpen = !this.mobileMenuOpen;
+
+    document.body.style.overflow = this.mobileMenuOpen
+      ? 'hidden'
+      : '';
+  }
+
+  closeMobileMenu(): void {
+    this.mobileMenuOpen = false;
+    document.body.style.overflow = '';
+  }
+
+  private initRevealAnimations(): void {
+    const revealElements = document.querySelectorAll('.reveal');
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            observer.unobserve(entry.target);
-
-            // Animate ratio fills if inside the build-ratio card
-            const fills = (entry.target as HTMLElement).querySelectorAll('.ratio-fill');
-            fills.forEach((fill) => {
-              const el = fill as HTMLElement;
-              const pct = el.getAttribute('data-pct') ?? '0%';
-              setTimeout(() => { el.style.width = pct; }, 400);
-            });
           }
         });
       },
-      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
+      {
+        threshold: 0.12
+      }
     );
 
-    document.querySelectorAll('.reveal').forEach((el) => observer.observe(el));
+    revealElements.forEach((el) => observer.observe(el));
   }
 
-  // ─── Nav border on scroll ────────────────────────────────────────────────────
-  private initNavScroll(): void {
-    const nav = document.querySelector('nav') as HTMLElement | null;
+  private initNavbarScroll(): void {
+    const nav = document.querySelector('nav');
+
     if (!nav) return;
 
     this.scrollListener = () => {
-      nav.style.borderBottomColor =
-        window.scrollY > 60
-          ? 'rgba(232, 197, 71, 0.15)'
-          : 'rgba(240, 240, 232, 0.07)';
-      nav.style.background =
-        window.scrollY > 60
-          ? 'rgba(15, 15, 30, 0.96)'
-          : 'rgba(15, 15, 30, 0.82)';
+      if (window.scrollY > 20) {
+        nav.classList.add('nav-scrolled');
+      } else {
+        nav.classList.remove('nav-scrolled');
+      }
     };
 
-    window.addEventListener('scroll', this.scrollListener, { passive: true });
-  }
-
-  // ─── Mobile menu ─────────────────────────────────────────────────────────────
-  private initMobileMenu(): void {
-    const hamburger = document.getElementById('navHamburger');
-    const menu      = document.getElementById('mobileMenu');
-    const closeBtn  = document.getElementById('mobileMenuClose');
-
-    if (!hamburger || !menu) return;
-
-    const open = () => {
-      this.mobileMenuOpen = true;
-      menu.removeAttribute('hidden');
-      hamburger.setAttribute('aria-expanded', 'true');
-      document.body.style.overflow = 'hidden';
-    };
-
-    const close = () => {
-      this.mobileMenuOpen = false;
-      menu.setAttribute('hidden', '');
-      hamburger.setAttribute('aria-expanded', 'false');
-      document.body.style.overflow = '';
-    };
-
-    hamburger.addEventListener('click', () => {
-      this.mobileMenuOpen ? close() : open();
-    });
-
-    closeBtn?.addEventListener('click', close);
-
-    // Close on link click
-    menu.querySelectorAll('a').forEach((link) => {
-      link.addEventListener('click', close);
-    });
-
-    // Close on Escape
-    document.addEventListener('keydown', (e: KeyboardEvent) => {
-      if (e.key === 'Escape' && this.mobileMenuOpen) close();
+    window.addEventListener('scroll', this.scrollListener, {
+      passive: true
     });
   }
 
-  // ─── Ratio bar animation (triggered by scroll reveal) ────────────────────────
-  private initRatioBars(): void {
-    // Also animate fills that are already visible on load
-    const ratioBlock = document.querySelector('.build-ratio');
-    if (!ratioBlock) return;
+  private initActiveLinks(): void {
+    const sections = document.querySelectorAll('section[id]');
+    const links = document.querySelectorAll('.nav-links a');
 
-    const ratioObserver = new IntersectionObserver(
+    const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const fills = entry.target.querySelectorAll('.ratio-fill');
-            fills.forEach((fill) => {
-              const el = fill as HTMLElement;
-              const pct = el.getAttribute('data-pct') ?? '0%';
-              setTimeout(() => { el.style.width = pct; }, 300);
-            });
-            ratioObserver.unobserve(entry.target);
-          }
+          if (!entry.isIntersecting) return;
+
+          const id = entry.target.getAttribute('id');
+
+          links.forEach((link) => {
+            link.classList.remove('active');
+
+            if (link.getAttribute('href') === `#${id}`) {
+              link.classList.add('active');
+            }
+          });
         });
       },
-      { threshold: 0.3 }
+      {
+        threshold: 0.35
+      }
     );
 
-    ratioObserver.observe(ratioBlock);
-  }
-
-  // ─── Active nav link highlight on scroll ─────────────────────────────────────
-  private initSmoothClose(): void {
-    const sections = document.querySelectorAll<HTMLElement>('section[id]');
-    const navLinks = document.querySelectorAll<HTMLAnchorElement>('.nav-links a');
-
-    const sectionObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const id = entry.target.getAttribute('id');
-            navLinks.forEach((link) => {
-              const href = link.getAttribute('href');
-              if (href === `#${id}`) {
-                link.style.color = 'var(--brass)';
-              } else {
-                link.style.color = '';
-              }
-            });
-          }
-        });
-      },
-      { threshold: 0.4 }
-    );
-
-    sections.forEach((section) => sectionObserver.observe(section));
+    sections.forEach((section) => observer.observe(section));
   }
 }
